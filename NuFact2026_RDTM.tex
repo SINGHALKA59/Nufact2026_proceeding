@@ -45,11 +45,11 @@
   DIS Regions}\\[1em]
 
   {\normalsize
-  Alka Singh$^{1,*}$ \quad Stephen Pate$^{2}$ \quad Richard Gran$^{3}$ and
-  \quad Huma Haider$^{1}$}\\[0.5em]
+  Alka Singh$^{1,*}$,  Huma Haider$^{1}$,  Stephen Pate$^{2}$  and  Richard Gran$^{3}$
+  }\\[0.5em]
 
   {\small
-  $^1$Department of Physics, Aligarh Muslim University, Aligarh 202002, India\\
+  \itshape $^1$Department of Physics, Aligarh Muslim University, Aligarh 202002, India\\
   $^2$Department of Physics, New Mexico State University, Las Cruces, NM 88003, USA\\
   $^3$Department of Physics, University of Minnesota Duluth, Duluth, MN 55812, USA}\\[0.5em]
 
@@ -118,18 +118,11 @@ Extension to nuclear targets is ongoing.
 
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=0.75\textwidth]{Fig2.png}\\[2pt]
-  \includegraphics[width=0.75\textwidth]{slide_3panel_F3ckmt_amu_tmc.png}\\[2pt]
-  \includegraphics[width=0.75\textwidth]{panel_f3sigmoid_delta.25_tmc_ht.png}
-  \caption{(Top) $F_2(x,Q^2)$ vs.\ $Q^2$ at $x=0.001, 0.01, 0.1$ for unscaled CKMT (blue dashed),
+  \includegraphics[width=0.75\textwidth]{Fig2.png}
+  \caption{$F_2(x,Q^2)$ vs.\ $Q^2$ at $x=0.001, 0.01, 0.1$ for unscaled CKMT (blue dashed),
     scaled CKMT at $Q^2_0=2$~GeV$^2$ (orange dotted), AMU (green solid), and linear splice (red solid).
-    Vertical dashed lines mark the splice window $[1.5,\,2.5]$~GeV$^2$.
-    (Middle) $xF_3(x,Q^2)$ vs.\ $Q^2$ for unscaled CKMT (blue dashed), scaled CKMT at $Q^2_0=2$~GeV$^2$ (orange dotted),
-    AMU with TMC (green solid), and linear splice hybrid (red solid), showing the sharp kink and slope discontinuity.
-    (Bottom) $xF_3(x,Q^2)$ vs.\ $Q^2$ with smooth sigmoid matching ($\Delta=0.25$~GeV$^2$): derivative continuity
-    is restored, but a non-monotonic dip persists due to the normalization offset between unscaled CKMT and AMU;
-    HT corrections suppress AMU further (purple vs.\ orange), slightly deepening this dip in the hybrid (green vs.\ red).}
-  \label{fig:matching}
+    Vertical dashed lines mark the splice window $[1.5,\,2.5]$~GeV$^2$.}
+  \label{fig:f2_matching}
 \end{figure*}
 
 % ===================== SECTION 2 ================================
@@ -142,6 +135,24 @@ The structure functions $F_2$ and $xF_3$ encode vector and
 parity-violating valence quark content respectively; $xF_3$ is particularly
 sensitive to the matching prescription since it probes valence quarks
 ($xF_3^{\nu N} = x[u_v + d_v]$ at leading order)~\cite{jeong}.
+For charged-current neutrino scattering
+$\nu_\mu(k) + N(p) \to \mu^-(k') + X(p')$, the double-differential
+cross section in the laboratory frame is~\cite{jeong}
+\begin{equation}
+\begin{aligned}
+  \frac{d^2\sigma^{\nu,\bar\nu}}{dx\,dy}
+  &= \frac{G_F^2 \,M_N E_\nu}{\pi}\left(\frac{M_W^2}{Q^2+M_W^2}\right)^{\!2}
+    \biggl[ y^2 x F_1 \\
+  &\quad + \!\left(1 - y - \frac{M_N xy}{2E_\nu}\right)\!F_2
+    \pm y\!\left(1-\frac{y}{2}\right)\!xF_3 \biggr]\!,
+\end{aligned}
+  \label{eq:xsec}
+\end{equation}
+where $x = Q^2/(2M_N\nu)$ is the Bjorken variable, $y = \nu/E_\nu$ is
+the inelasticity, $Q^2 = -q^2$ is the momentum transfer squared, $\nu$
+is the energy transfer in the lab frame, $M_N$ is the nucleon mass, and
+$G_F$ is the Fermi coupling constant. The upper (lower) sign $\pm$ in
+Eq.~(\ref{eq:xsec}) applies to neutrino (anti-neutrino) scattering.
 \subsection{AMU (High-$Q^2$) Model}
 
 The AMU model computes the structure functions with CT10nlo
@@ -205,18 +216,41 @@ $Q^2_0 = 2.0$~GeV$^2$.
 
 \subsection{Hybrid Structure Functions: Linear Splice vs.\ Smooth Sigmoid}
 
-Figure~\ref{fig:matching}(Top) compares the original (unscaled) CKMT,
+Figure~\ref{fig:f2_matching} compares the original (unscaled) CKMT,
 scaled CKMT at $Q^2_0=2$~GeV$^2$, AMU, and the linear splice for $F_2$.
 For $xF_3$, because the linear splice directly joins the unscaled CKMT with AMU,
 the curvature and normalization mismatch generates a prominent downward kink
-and slope discontinuity at low~$x$, visible in Fig.~\ref{fig:matching}(Middle).
-Fig.~\ref{fig:matching}(Bottom) shows the result of replacing the linear weight
+and slope discontinuity at low~$x$, visible in Fig.~\ref{fig:xf3_matching}.
+Fig.~\ref{fig:xf3_sigmoid} shows the result of replacing the linear weight
 with a smooth sigmoid ($\Delta=0.25$~GeV$^2$). While the sigmoid restores
 derivative continuity and removes the sharp angular vertices, an unphysical
 non-monotonic dip remains visible across the transition window $[1.5,\,2.5]$~GeV$^2$
 because unscaled CKMT sits systematically above AMU at $Q^2 \sim 2$~GeV$^2$.
 Furthermore, HT corrections suppress AMU by 5--15\% (purple dash-dotted vs.\ orange dashed),
 widening this normalization gap and deepening the dip in the full hybrid curve (green solid).
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=0.88\textwidth]{slide_3panel_F3ckmt_amu_tmc.png}
+  \captionof{figure}{$xF_3(x,Q^2)$ vs.\ $Q^2$ for the linear splice: unscaled CKMT
+    (blue dashed), scaled CKMT (orange dotted), AMU with TMC (green solid), and the
+    hybrid (red solid). The kink and slope discontinuity are most prominent at low~$x$.}
+  \label{fig:xf3_matching}
+
+  \vspace{0.35em}
+  \includegraphics[width=0.88\textwidth]{panel_f3sigmoid_delta.25_tmc_ht.png}
+  \captionof{figure}{$xF_3(x,Q^2)$ vs.\ $Q^2$ with smooth sigmoid matching
+    ($\Delta=0.25$~GeV$^2$). Derivative continuity is restored, but the normalization
+    offset leaves a non-monotonic dip; HT corrections deepen it slightly.}
+  \label{fig:xf3_sigmoid}
+
+  \vspace{0.35em}
+  \includegraphics[width=0.48\textwidth]{Fig4a.png}\hfill
+  \includegraphics[width=0.48\textwidth]{Fig4b.png}
+  \captionof{figure}{$F_2(x,Q^2)$ vs.\ $Q^2$ for CT10nlo, CT18NLO, and
+    MMHT2014nlo68cl. The PDF spread is small at low~$x$ and larger at high~$x$.}
+  \label{fig:pdf_sensitivity}
+\end{figure*}
 
 
 
@@ -228,19 +262,6 @@ At low $x$ the sets converge before the splice window, leaving the
 hybrid effectively PDF-independent in that region.
 At high $x$ ($0.3$, $0.6$) the PDF spread is larger and extends
 closer to $Q^2_0$, motivating a full PDF uncertainty quantification.
-
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=0.65\textwidth]{Fig4a.png}\\[2pt]
-  \includegraphics[width=0.65\textwidth]{Fig4b.png}
-  \caption{$F_2(x,Q^2)$ vs.\ $Q^2$ for CT10nlo (red), CT18NLO
-    (blue), and MMHT2014nlo68cl (green). Solid: AMU; dotted: scaled CKMT;
-    dashed: CKMT without PDF dependence.
-    Vertical lines: splice window $[1.5,\,2.5]$~GeV$^2$.
-    (a) Low $x$: sets converge before the splice window.
-    (b) High $x$: larger PDF spread extends closer to the matching scale.}
-  \label{fig:pdf_sensitivity}
-\end{figure*}
 
 % ===================== SECTION 4 ================================
 \section{Conclusions}

@@ -81,7 +81,7 @@ Linear splicing of unscaled CKMT with AMU generates unphysical kink artefacts in
 neutrino deep inelastic scattering; weak structure functions;
 CKMT parametrization; low-$Q^2$ modelling; quark--hadron duality\\[0.2em]
 \noindent\textbf{Acknowledgements and Funding:}
-This work was supported in part by the United States Department of Energy (US DOE) under Grant No.~DE-FG02-94ER40847. A.S.\ acknowledges support from the Department of Physics, Aligarh Muslim University, Aligarh.\\[0.2em]
+This work was supported by the U.S. Department of Energy under Grant No.~DE-FG02-94ER40847, awarded to Stephen Pate. A.S.\ acknowledges support from the Department of Physics, Aligarh Muslim University, Aligarh.\\[0.2em]
 \noindent\rule{\linewidth}{0.4pt}
 \vspace{0.2em}
 }]
@@ -104,7 +104,7 @@ Generators such as GENIE~\cite{GENIE} and NuWro~\cite{NuWro} use the
 Bodek--Yang prescription~\cite{BY} to extend pQCD into this region; it
 relies on GRV98 LO PDFs and treats target-mass and higher-twist effects
 implicitly. Here we compare linear and smooth-sigmoid matching of the
-CKMT~\cite{CKMT} and AMU (NLO+TMC+HT) models for free-nucleon $F_2$ and
+CKMT~\cite{CKMT} and AMU~\cite{Zaidi2020} (NLO+TMC+HT) models for free-nucleon $F_2$ and
 $xF_3$; extension to nuclear targets is ongoing.
 
 \section{Theoretical Framework}
@@ -139,8 +139,7 @@ is~\cite{Haider2011}
   \label{eq:xsec}
 \end{equation}
 \endgroup
-
-Here, $G_F$ is the Fermi coupling constant, $m_\ell$ is the
+where $G_F$ is the Fermi coupling constant, $m_\ell$ is the
 mass of lepton, $E_\nu$ is the incident
 neutrino (or antineutrino) energy, and $M_N$ is the nucleon
 mass. The Bjorken scaling variable is defined as
@@ -162,8 +161,9 @@ of perturbative QCD. In the present work, the CT10nlo
 PDF set~\cite{CT10} is employed to describe the
 quark and antiquark distributions in the nucleon.
 Next-to-leading-order (NLO) QCD corrections are
-incorporated following the formalism of Moch et al.
-~\cite{Vermaseren2005,VanNeervenVogt}. Furthermore, target mass corrections
+incorporated using the coefficient-function calculations of
+Vermaseren, Vogt, and Moch, and van Neerven and Vogt
+~\cite{Vermaseren2005,Moch2009,VanNeervenVogt}. Furthermore, target mass corrections
 (TMCs) ~\cite{Schienbein} are included to account for finite nucleon-mass
 effects, which are important at high $x$ and moderate $Q^2$.
 At low $Q^2$ and high $x$, we also include phenomenological higher-twist
@@ -171,16 +171,19 @@ At low $Q^2$ and high $x$, we also include phenomenological higher-twist
 leading-twist description. Their implementation in the AMU model is
 described below.
 \subsection{AMU (High-$Q^2$) Model}
-The AMU model computes the structure functions with CT10nlo
-PDFs~\cite{CT10} with NLO coefficient functions, target-mass
-corrections, and higher-twist contributions given below.
+Related AMU calculations of weak nucleon and nuclear structure functions
+with perturbative and nonperturbative QCD corrections are presented
+in Ref.~\cite{Zaidi2020}. Here, the structure functions are computed
+with CT10nlo PDFs~\cite{CT10}, NLO coefficient functions, target-mass
+corrections, and higher-twist contributions as described below.
 
 The partons inside the nucleon interact through gluon exchange, as
 described by QCD. Including gluon emission introduces a dependence on
 $Q^2$ in the nucleon structure functions and thus violates Bjorken
 scaling. At finite $Q^2$, the strong coupling can make NLO contributions
 significant, with higher perturbative orders also contributing. Following
-Vermaseren et al.~\cite{Vermaseren2005} and Moch et al.~\cite{VanNeervenVogt},
+Vermaseren et al.~\cite{Vermaseren2005}, Moch et al.~\cite{Moch2009},
+and van Neerven and Vogt~\cite{VanNeervenVogt},
 the structure functions are expressed in terms of the PDFs and the
 quark- and gluon-level coefficient functions:
 \begin{equation}
@@ -210,7 +213,7 @@ for the three structure functions are~\cite{Schienbein}:
     &\simeq \frac{x^2}{\xi^2\gamma^3}F_2(\xi,Q^2)
        \left[1+\frac{6\mu x\xi}{\gamma}(1-\xi)^2\right],\\
   F_3^{\rm TMC}(x,Q^2)
-    &\simeq \frac{x}{\xi^2\gamma^2}F_3(\xi,Q^2)
+    &\simeq \frac{x}{\xi\gamma^2}F_3(\xi,Q^2)
        \left[1-\frac{\mu x\xi}{\gamma}(1-\xi)\ln\xi\right].
 \end{aligned}
 \label{eq:tmc}
@@ -230,8 +233,8 @@ where $D_2$ parameterizes multiparton correlations and has dimensions
 of mass squared~\cite{Stein1998,Dasgupta1996}. The $1/Q^2$ dependence
 makes this correction most relevant at low $Q^2$.
 
-The AMU model is reliable for $Q^2 \gtrsim 2$~GeV$^2$ but diverges
-in the non-perturbative regime.
+We use the AMU model for $Q^2 \gtrsim 2$~GeV$^2$; at lower $Q^2$,
+the perturbative description is not applicable.
 
 \subsection{CKMT Parametrization}
 
@@ -428,19 +431,15 @@ The authors declare that they have no conflict of interest.
   AIP Conf.\ Proc.\ \textbf{1189}, 276 (2009).
 %  \href{https://doi.org/10.1063/1.3274170}{doi:10.1063/1.3274170}
 
-\bibitem{Moch2005}
-S. Moch, J. A. M. Vermaseren, and A. Vogt,
-Phys. Lett. B \textbf{606}, 123 (2005).
-%\href{https://doi.org/10.1016/j.physletb.2004.11.063}
-{doi:10.1016/j.physletb.2004.11.063}
+\bibitem{GENIE}
+  C. Andreopoulos et al.,
+  Nucl.\ Instrum.\ Meth.\ A \textbf{614}, 87 (2010).
+  % \href{https://doi.org/10.1016/j.nima.2009.12.009}{doi:10.1016/j.nima.2009.12.009}
 
-\bibitem{Vermaseren2005}
-  S. Moch, J.~A.~M. Vermaseren, and A. Vogt,
-  Nucl.\ Phys.\ B \textbf{724}, 3 (2005).
-
-\bibitem{VanNeervenVogt}
-  W.~L. van Neerven and A. Vogt,
-  Nucl.\ Phys.\ B \textbf{568}, 263 (2000).
+\bibitem{NuWro}
+  T. Golan, J.T. Sobczyk, J. Zmuda,
+  Nucl.\ Phys.\ B Proc.\ Suppl.\ \textbf{229--232}, 499 (2012).
+  % \href{https://doi.org/10.1016/j.nuclphysbps.2012.09.136}{doi:10.1016/j.nuclphysbps.2012.09.136}
 
 \bibitem{BY}
   A. Bodek and U.~K. Yang,
@@ -452,10 +451,12 @@ Phys. Lett. B \textbf{606}, 123 (2005).
   Phys.\ Lett.\ B \textbf{337}, 358 (1994).
 %  \href{https://doi.org/10.1016/0370-2693(94)90988-1}{doi:10.1016/0370-2693(94)90988-1}
 
-\bibitem{RenoCKMT}
-  Y.~S. Jeong and M.~H. Reno,
-  ``Neutrino Cross Sections: Interface of Shallow- and Deep-Inelastic
-  Scattering for Collider Neutrinos,'' arXiv:2307.09241 [hep-ph] (2023).
+\bibitem{Zaidi2020}
+  F. Zaidi, H. Haider, M. Sajjad Athar, S.~K. Singh, and I. Ruiz Simo,
+  ``Weak structure functions in $\nu_l$--$N$ and $\nu_l$--$A$ scattering
+  with nonperturbative and higher order perturbative QCD effects,''
+  Phys.\ Rev.\ D \textbf{101}, 033001 (2020).
+  % \href{https://doi.org/10.1103/PhysRevD.101.033001}{doi:10.1103/PhysRevD.101.033001}
 
 \bibitem{Haider2011}
   H. Haider, I. Ruiz Simo, M. Sajjad Athar, and M.~J. Vicente Vacas,
@@ -467,20 +468,22 @@ Phys. Lett. B \textbf{606}, 123 (2005).
   Phys.\ Rev.\ D \textbf{82}, 074024 (2010).
   % \href{https://doi.org/10.1103/PhysRevD.82.074024}{doi:10.1103/PhysRevD.82.074024}
 
+\bibitem{Vermaseren2005}
+  J.~A.~M. Vermaseren et al.,
+  Nucl.\ Phys.\ B \textbf{724}, 3 (2005).
+
+\bibitem{Moch2009}
+  S. Moch, J.~A.~M. Vermaseren, and A. Vogt,
+  Nucl.\ Phys.\ B \textbf{813}, 220 (2009).
+
+\bibitem{VanNeervenVogt}
+  W.~L. van Neerven and A. Vogt,
+  Nucl.\ Phys.\ B \textbf{568}, 263 (2000); \textbf{588}, 345 (2000).
+
 \bibitem{Schienbein}
   I. Schienbein et al.,
   J.\ Phys.\ G \textbf{35}, 053101 (2008).
   % \href{https://doi.org/10.1088/0954-3899/35/5/053101}{doi:10.1088/0954-3899/35/5/053101}
-
-\bibitem{GENIE}
-  C. Andreopoulos et al.,
-  Nucl.\ Instrum.\ Meth.\ A \textbf{614}, 87 (2010).
-  % \href{https://doi.org/10.1016/j.nima.2009.12.009}{doi:10.1016/j.nima.2009.12.009}
-
-\bibitem{NuWro}
-  T. Golan, J.T. Sobczyk, J. Zmuda,
-  Nucl.\ Phys.\ B Proc.\ Suppl.\ \textbf{229--232}, 499 (2012).
-  % \href{https://doi.org/10.1016/j.nuclphysbps.2012.09.136}{doi:10.1016/j.nuclphysbps.2012.09.136}
 
 \bibitem{Stein1998}
   E. Stein et al.,
@@ -489,6 +492,11 @@ Phys. Lett. B \textbf{606}, 123 (2005).
 \bibitem{Dasgupta1996}
   M. Dasgupta and B.~R. Webber,
   Phys.\ Lett.\ B \textbf{382}, 273 (1996).
+
+\bibitem{RenoCKMT}
+  Y.~S. Jeong and M.~H. Reno,
+  ``Neutrino Cross Sections: Interface of Shallow- and Deep-Inelastic
+  Scattering for Collider Neutrinos,'' arXiv:2307.09241 [hep-ph] (2023).
 
 \end{thebibliography}
 

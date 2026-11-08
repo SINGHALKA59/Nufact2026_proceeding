@@ -73,8 +73,8 @@
 \begin{center}\vspace{-0.5em}{\bfseries Abstract}\end{center}
 \noindent
 Neutrino-nucleon charged-current deep inelastic scattering (DIS) in the transition region ($Q^2 \sim 1$--$4$~GeV$^2$) is important for neutrino oscillation experiments such as NOvA, T2K, DUNE, and Hyper-Kamiokande, where perturbative QCD breaks down and non-perturbative hadronic effects become significant. Motivated by Bloom--Gilman quark--hadron duality, we construct a hybrid description of $F_2$ and $xF_3$ across this region.
-We combine the Regge-inspired CKMT parametrization at low $Q^2$ with the AMU perturbative QCD framework (NLO $+$ target mass corrections $+$ higher-twist effects) at higher $Q^2$. The models are matched at changeover scale $Q_0^2 = 2~\mathrm{GeV}^2$ using two established transition prescriptions: a piecewise linear splice and a smooth sigmoid weighting function.
-Linear splicing of unscaled CKMT with AMU generates unphysical kink artefacts in $xF_3$ at low~$x$ due to curvature and normalization differences between the models. The smooth sigmoid weighting ($\Delta = 0.25$~GeV$^2$, AMU with LO+NLO+TMC+HT) restores derivative continuity across the matching boundary; however, a non-monotonic dip persists due to the normalization offset between unscaled CKMT and AMU, which is further deepened when higher-twist corrections are included.
+We combine the Regge-inspired CKMT parametrization at low $Q^2$ with the Aligarh--Muslim University--Valencia (AMU-Valencia) framework (NLO $+$ target mass corrections $+$ higher-twist effects) at higher $Q^2$. The models are matched at changeover scale $Q_0^2 = 2~\mathrm{GeV}^2$ using two established transition prescriptions: a piecewise linear splice and a smooth sigmoid weighting function.
+Linear splicing of unscaled CKMT with AMU-Valencia generates unphysical kink artefacts in $xF_3$ at low~$x$ due to curvature and normalization differences between the models. The smooth sigmoid weighting ($\Delta = 0.25$~GeV$^2$, AMU-Valencia with LO+NLO+TMC+HT) restores derivative continuity across the matching boundary; however, a non-monotonic dip persists due to the normalization offset between unscaled CKMT and AMU-Valencia, which is further deepened when higher-twist corrections are included.
  The hybrid framework highlights the necessity of smooth matching and proper normalization across the resonance-to-DIS interface.
 \\[0.3em]
 \noindent\textbf{Keywords:}
@@ -89,9 +89,10 @@ This work was supported by the U.S. Department of Energy under Grant No.~DE-FG02
 \section{Introduction}
 \label{sec:intro}
 
-Neutrino deep inelastic scattering (DIS) spans quasi-elastic, resonance,
-and perturbative regimes. Its few-GeV transition region
-($Q^2 \sim 1$--$4$~GeV$^2$) is important for oscillation experiments
+At few-GeV energies, neutrino--nucleon interactions include quasi-elastic
+(QE) scattering, resonance (RES) production, and deep-inelastic
+scattering (DIS). The transition from resonance production to perturbative
+DIS, at $Q^2 \sim 1$--$4$~GeV$^2$, is important for oscillation experiments
 including NOvA, T2K, DUNE, and Hyper-Kamiokande, yet no single model
 describes it consistently~\cite{nuxsec}.
 
@@ -104,7 +105,7 @@ Generators such as GENIE~\cite{GENIE} and NuWro~\cite{NuWro} use the
 Bodek--Yang prescription~\cite{BY} to extend pQCD into this region; it
 relies on GRV98 LO PDFs and treats target-mass and higher-twist effects
 implicitly. Here we compare linear and smooth-sigmoid matching of the
-CKMT~\cite{CKMT} and AMU~\cite{Zaidi2020} (NLO+TMC+HT) models for free-nucleon $F_2$ and
+CKMT~\cite{CKMT} and the AMU-Valencia framework~\cite{Haider2016,Zaidi2020} (NLO+TMC+HT) for free-nucleon $F_2$ and
 $xF_3$; extension to nuclear targets is ongoing.
 
 \section{Theoretical Framework}
@@ -167,13 +168,14 @@ Vermaseren, Vogt, and Moch, and van Neerven and Vogt
 (TMCs) ~\cite{Schienbein} are included to account for finite nucleon-mass
 effects, which are important at high $x$ and moderate $Q^2$.
 At low $Q^2$ and high $x$, we also include phenomenological higher-twist
-(HT) contributions, which account for power-suppressed effects beyond the
-leading-twist description. Their implementation in the AMU model is
+(HT) contributions~\cite{Stein1998,Dasgupta1996}, which account for power-suppressed effects beyond the
+leading-twist description. Their implementation in the AMU-Valencia
+framework~\cite{Zaidi2020} is
 described below.
-\subsection{AMU (High-$Q^2$) Model}
-Related AMU calculations of weak nucleon and nuclear structure functions
-with perturbative and nonperturbative QCD corrections are presented
-in Ref.~\cite{Zaidi2020}. Here, the structure functions are computed
+\subsection{AMU-Valencia Framework at High $Q^2$}
+The AMU-Valencia framework has been used to calculate nucleon and
+nuclear structure functions with perturbative and nonperturbative QCD
+corrections~\cite{Haider2016,Zaidi2020}. Here, the structure functions are computed
 with CT10nlo PDFs~\cite{CT10}, NLO coefficient functions, target-mass
 corrections, and higher-twist contributions as described below.
 
@@ -233,7 +235,7 @@ where $D_2$ parameterizes multiparton correlations and has dimensions
 of mass squared~\cite{Stein1998,Dasgupta1996}. The $1/Q^2$ dependence
 makes this correction most relevant at low $Q^2$.
 
-We use the AMU model for $Q^2 \gtrsim 2$~GeV$^2$; at lower $Q^2$,
+We use the AMU-Valencia framework for $Q^2 \gtrsim 2$~GeV$^2$; at lower $Q^2$,
 the perturbative description is not applicable.
 
 \subsection{CKMT Parametrization}
@@ -293,15 +295,11 @@ Table~\ref{tab:ckmt-parameters}; the other parameters are common.
   \label{tab:ckmt-parameters}
 \end{table}
 
-\subsection{Hybrid Matching: Linear Splice}
-
-To bridge the low-$Q^2$ CKMT regime and high-$Q^2$ pQCD, the two models
-are matched across a crossover region around $Q^2_0 = 2.0$~GeV$^2$.
-Here, ``unscaled CKMT'' denotes the original parametrization
-$F^{\rm CKMT}(x,Q^2)$. For comparison, ``scaled CKMT'' denotes a
-multiplicatively normalized version. For each charged-current structure
-function $F_{i,\mathrm{CC}}$ ($i=2,3$), we use the normalization
-prescription
+The original parametrization is referred to as ``unscaled CKMT.''
+For comparison, ``scaled CKMT'' is normalized separately at each $x$
+and for each charged-current structure function $F_{i,\mathrm{CC}}$
+($i=2,3$) to match the AMU-Valencia NLO+TMC prediction without higher-twist
+corrections at $Q^2_0=2.0$~GeV$^2$:
 \begin{equation}
   F_{i,\mathrm{CC}}^{\rm scaled}(x,Q^2)
     = F_{i,\mathrm{CC}}^{\rm CKMT}(x,Q^2)
@@ -309,13 +307,14 @@ prescription
            {F_{i,\mathrm{CC}}^{\rm CKMT}(x,Q^2_0)},
   \label{eq:ckmt-scale}
 \end{equation}
-where the ratio is evaluated separately at each $x$ and for each
-structure function, using the NLO calculation with target-mass
-corrections and without higher-twist corrections in the numerator.
-It is independent of $Q^2$, so the scaled CKMT prediction agrees with
-NLO+TMC at $Q^2=Q^2_0$.
-The hybrid prescriptions below use unscaled CKMT; the scaled version is
-shown only for comparison. A piecewise linear interpolation splice across
+The resulting normalization factor is held fixed as $Q^2$ varies.
+
+\subsection{Hybrid Matching: Linear Splice}
+
+To bridge the low-$Q^2$ CKMT regime and high-$Q^2$ pQCD, the two models
+are matched across the crossover region around $Q^2_0=2.0$~GeV$^2$.
+The hybrid prescriptions use unscaled CKMT; the scaled version is shown
+only for comparison. A piecewise linear interpolation splice across
 $[1.5,\,2.5]$~GeV$^2$ is defined by:
 \begin{equation}
   F^{\rm hyb} =
@@ -330,9 +329,9 @@ $[1.5,\,2.5]$~GeV$^2$ is defined by:
 with the linear weight $c(Q^2)=(Q^2-1.5)/(2.5-1.5)$.
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=0.88\textwidth]{Fig1.png}
+  \includegraphics[width=0.9\textwidth]{Fig1.png}
   \caption{$F_2(x,Q^2)$ vs.\ $Q^2$ at $x=0.001, 0.01, 0.1$ for unscaled CKMT (blue dashed),
-    scaled CKMT at $Q^2_0=2$~GeV$^2$ (orange dotted), AMU (green solid), and linear splice (red solid).
+    scaled CKMT at $Q^2_0=2$~GeV$^2$ (orange dotted), AMU-Valencia (green solid), and linear splice (red solid).
     Vertical dashed lines mark the splice window $[1.5,\,2.5]$~GeV$^2$.}
   \label{fig:f2_matching}
 \end{figure*}
@@ -358,29 +357,29 @@ $Q^2_0 = 2.0$~GeV$^2$.
 \subsection{Hybrid Structure Functions: Linear Splice vs.\ Smooth Sigmoid}
 
 Figure~\ref{fig:f2_matching} compares the original (unscaled) CKMT,
-scaled CKMT at $Q^2_0=2$~GeV$^2$, AMU, and the linear splice for $F_2$.
-For $xF_3$, because the linear splice directly joins the unscaled CKMT with AMU,
+scaled CKMT at $Q^2_0=2$~GeV$^2$, AMU-Valencia, and the linear splice for $F_2$.
+For $xF_3$, because the linear splice directly joins the unscaled CKMT with AMU-Valencia,
 the curvature and normalization mismatch generates a prominent downward kink
 and slope discontinuity at low~$x$, visible in Fig.~\ref{fig:xf3_matching}.
 Fig.~\ref{fig:xf3_sigmoid} shows the result of replacing the linear weight
 with a smooth sigmoid ($\Delta=0.25$~GeV$^2$). While the sigmoid restores
 derivative continuity and removes the sharp angular vertices, an unphysical
 non-monotonic dip remains visible across the transition window $[1.5,\,2.5]$~GeV$^2$
-because unscaled CKMT sits systematically above AMU at $Q^2 \sim 2$~GeV$^2$.
-Furthermore, HT corrections suppress AMU by 5--15\% (purple dash-dotted vs.\ orange dashed),
+because unscaled CKMT sits systematically above AMU-Valencia at $Q^2 \sim 2$~GeV$^2$.
+Furthermore, HT corrections suppress the AMU-Valencia prediction by 5--15\% (purple dash-dotted vs.\ orange dashed),
 widening this normalization gap and deepening the dip in the full hybrid curve (green solid).
 
 \begin{figure*}[!t]
   \centering
-  \includegraphics[width=0.88\textwidth]{Fig2.png}
+  \includegraphics[width=0.9\textwidth]{Fig2.png}
   \captionof{figure}{$xF_3(x,Q^2)$ vs.\ $Q^2$ for the linear splice: unscaled CKMT
-    (blue dashed), CKMT scaled at $Q_0^2=2$~GeV$^2$ (orange dotted), AMU
+    (blue dashed), CKMT scaled at $Q_0^2=2$~GeV$^2$ (orange dotted), AMU-Valencia
     (LO+NLO+TMC; green solid), and the hybrid (red solid). The kink and slope
     discontinuity are most prominent at low~$x$.}
   \label{fig:xf3_matching}
 
   \vspace{0.15em}
-  \includegraphics[width=0.88\textwidth]{Fig3.png}
+  \includegraphics[width=0.9\textwidth]{Fig3.png}
   \captionof{figure}{$xF_3(x,Q^2)$ vs.\ $Q^2$ with smooth sigmoid matching
     ($\Delta=0.25$~GeV$^2$). Derivative continuity is restored, but the normalization
     offset leaves a non-monotonic dip; HT corrections deepen it slightly.}
@@ -393,13 +392,13 @@ widening this normalization gap and deepening the dip in the full hybrid curve (
 
 We have presented a hybrid framework for the charged-current weak
 structure functions $F_2$ and $xF_3$ that bridges the
-non-perturbative CKMT description at low $Q^2$ and the AMU
-(NLO+TMC+HT) pQCD calculation at high $Q^2$, with a changeover scale
+non-perturbative CKMT description at low $Q^2$ and the AMU-Valencia
+(NLO+TMC+HT) framework at high $Q^2$, with a changeover scale
 $Q^2_0 = 2.0$~GeV$^2$. Our results show that linear splicing can produce
 visible kinks in $xF_3$, particularly at low~$x$. Smooth sigmoid weighting
 with $\Delta = 0.25$~GeV$^2$ removes the sharp slope discontinuity, but a
 non-monotonic dip remains because of the normalization difference between
-unscaled CKMT and AMU, and is accentuated by higher-twist corrections.
+unscaled CKMT and AMU-Valencia, and is accentuated by higher-twist corrections.
 These results emphasize that a smooth transition alone is not sufficient:
 the normalization of the two descriptions must also be addressed. Future
 work will validate the framework against CCFR/NuTeV structure-function data,
@@ -447,19 +446,26 @@ The authors declare that they have no conflict of interest.
 %  \href{https://doi.org/10.1016/S0920-5632(02)01755-3}{doi:10.1016/S0920-5632(02)01755-3}
 
 \bibitem{CKMT}
-  A. Capella, A. Kaidalov, C. Merino, J. Tran Thanh Van,
+  A. Capella et al.,
   Phys.\ Lett.\ B \textbf{337}, 358 (1994).
 %  \href{https://doi.org/10.1016/0370-2693(94)90988-1}{doi:10.1016/0370-2693(94)90988-1}
 
+\bibitem{Haider2016}
+  H. Haider et al.,
+  ``Nuclear medium effects in $F_2^{A,\mathrm{EM}}$ and
+  $F_2^{A,\mathrm{Weak}}$ structure functions,''
+  Nucl.\ Phys.\ A \textbf{955}, 58--78 (2016).
+  % \href{https://doi.org/10.1016/j.nuclphysa.2016.06.006}{doi:10.1016/j.nuclphysa.2016.06.006}
+
 \bibitem{Zaidi2020}
-  F. Zaidi, H. Haider, M. Sajjad Athar, S.~K. Singh, and I. Ruiz Simo,
+  F. Zaidi et al.,
   ``Weak structure functions in $\nu_l$--$N$ and $\nu_l$--$A$ scattering
   with nonperturbative and higher order perturbative QCD effects,''
   Phys.\ Rev.\ D \textbf{101}, 033001 (2020).
   % \href{https://doi.org/10.1103/PhysRevD.101.033001}{doi:10.1103/PhysRevD.101.033001}
 
 \bibitem{Haider2011}
-  H. Haider, I. Ruiz Simo, M. Sajjad Athar, and M.~J. Vicente Vacas,
+  H. Haider et al.,
   ``Nuclear medium effects in $\nu(\bar\nu)$-nucleus deep inelastic scattering,''
   Phys.\ Rev.\ C \textbf{84}, 054610 (2011).
 
